@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pato Gonzalez - Magia y Humor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #000;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffd700;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: #d14d4d;
+            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header h2 {
+            font-size: 3rem;
+            color: #d14d4d;
+            margin-top: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header h3 {
+            font-size: 1.5rem;
+            color: #ffffff; /* Cambié el color a blanco */
+            margin-top: 10px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #d14d4d;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: black;
+        }
+
+        .classes-section {
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .classes-section .card {
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            font-size: 0.9rem;
+            color: black;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        .description h4 {
+            font-size: 1.8rem;
+            color: #d14d4d; /* Cambié el color a rojo */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magia y Humor</h1>
+        <h2>Pato Gonzalez</h2>
+        <h3>Ilusionista Profesional</h3>
+    </header>
+
+    <div class="description">
+        <h4>Shows de Magia</h4>
+        <p>Convierte tus evento en una experiencia inolvidable con un espectáculo de magia y humor totalmente único y personalizado. Desde asombrosos efectos hasta momentos de humor, estos shows son ideales para sorprender y entretener a tus invitados.</p>
+    </div>
+
+    <main>
+        <div class="card" onclick="redirectToWhatsApp('cumplea%C3%B1os', 'Hola, te consulto por un show para un cumpleaños.')">
+            <h3>Cumpleaños</h3>
+            <p>Shows personalizados para cumpleaños inolvidables.</p>
+        </div>
+
+        <div class="card" onclick="redirectToWhatsApp('empresariales', 'Hola, te consulto por un show para un evento empresarial.')">
+            <h3>Eventos Empresariales</h3>
+            <p>Entretenimiento mágico para empresas.</p>
+        </div>
+
+        <div class="card" onclick="redirectToWhatsApp('privados', 'Hola, te consulto por un show para un evento privado.')">
+            <h3>Eventos Privados</h3>
+            <p>Magia exclusiva para reuniones privadas.</p>
+        </div>
+    </main>
+
+    <section class="classes-section">
+        <div class="description">
+            <h4>Clases de Magia</h4>
+            <p>¿Te apasiona la magia? Aprende los secretos detrás de los trucos más sorprendentes y desarrolla tus habilidades como mago. Ofrecemos clases para todos los niveles, desde principiantes hasta avanzados.</p>
+        </div>
+        <div class="card" onclick="redirectToWhatsApp('clases', 'Hola, estoy interesado en tomar clases de magia.')">
+            <h3>Clases de Magia</h3>
+            <p>Aprende magia desde principiante hasta avanzado.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Pato Gonzalez. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function redirectToWhatsApp(category, message) {
+            const phoneNumber = "1162421373"; // Reemplaza con tu número de WhatsApp
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
